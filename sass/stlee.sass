@@ -1,0 +1,390 @@
+@mixin buton_style
+ border-radius: 2px
+ padding:8px 16px
+// @mixin input-mix($bg_img)
+ // border: 1.5px solid #D9D9D9
+ // font-size: 16px
+ // line-height: 24px
+ // color: #BFBFBF
+ // border-radius: 4px
+ // background: #FFFFFF
+ // background-image: $bg_img
+ // background-repeat: no-repeat
+ // background-position: left 11px center
+@mixin flex_center_row
+ display: flex
+ align-items: center
+
+*
+ box-sizing: border-box
+ font-family: 'Roboto', sans-serif
+
+ body
+  padding-top: 44px
+.container
+ max-width:1200px
+ margin: auto
+ .header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 40px
+  .input
+   border: 1.5px solid #D9D9D9
+   font-size: 16px
+   line-height: 24px
+   color: #BFBFBF
+   border-radius: 4px
+   background: #FFFFFF
+   background-repeat: no-repeat
+   background-position: left 11px center
+   padding: 8px 0px 8px 35px
+  .input-addres
+   // @include input-mix(url(../img/home.svg))
+   flex: 0.8
+   background-image: url(../img/home.svg)
+  .buttons
+   @include flex_center_row
+   .button
+    height: 40px
+    font-size: 16px
+    line-height: 24px
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015)
+    display: flex
+    align-items: center
+    .button_icon
+     margin-right:6px
+    @include buton_style()
+   .button_enter
+    border: 1.5px solid #1890FF
+    background-image: url(../img/human.svg)
+    background-repeat: no-repeat
+    background-position: left 
+    color: #fff
+    background: #1890FF
+    margin-right: 10px
+   .button_laundry
+    border: 1.5px solid #D9D9D9
+    color: #595959
+    background-image: url(../img/cart.svg)
+    background-repeat: no-repeat
+    background-position: left 
+    background: #fff
+.main
+ background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+ .promo
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1)
+  background: #FFF1B8 url(../img/pizza.png) no-repeat top -53px  right -270px
+  border-radius: 10px
+  padding: 68px 70px
+  margin-bottom: 60px
+
+  .title
+   margin-bottom: 15px
+   font-weight: bold
+   // font-size: 39px
+   line-height: 46px
+   color: #302C34
+  .promo-text
+   font-style: normal
+   font-weight: normal
+   font-size: 24px
+   line-height: 28px
+   max-width: 530px
+   color: #302C34
+ .restaurants
+  .section-heading
+   @include flex_center_row
+   justify-content: space-between
+   margin-bottom: 44px
+   .section-title
+    font-size: 36px
+    line-height: 42px
+    color: #000000
+   .input-search
+    border: 1.5px solid #D9D9D9
+    font-size: 16px
+    line-height: 24px
+    color: #BFBFBF
+    border-radius: 4px
+    background: #FFFFFF url(../img/search.svg)
+    background-repeat: no-repeat
+    background-position: left 11px center
+    padding: 8px 0px 8px 35px
+    flex: 0.3
+  .cards
+   display: flex
+   align-items:flex-start
+   // justify-content: column
+   flex-wrap: wrap
+   justify-content: space-between
+   .card
+    background: #FFFFFF
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+    border-radius: 7px
+    overflow: hidden
+    margin-bottom: 30px
+    flex-basis: 31.5%
+    text-decoration: none
+    .card_img
+     border-radius: 7px 7px 0px 0px
+     width: 384px
+     height: 250px
+     object-fit: cover
+    .card_text
+     padding: 20px 25px 35px 25px
+     .card_descriprtion
+      @include flex_center_row
+      justify-content: space-between
+      .card_title
+       font-style: normal
+       font-weight: bold
+       font-size: 24px
+       line-height: 32px
+       color: #000000
+      .card_time
+       color: #FFFFFF
+       // font-family: SF Pro Display
+       font-style: normal
+       font-weight: normal
+       font-size: 12px
+       line-height: 20px
+       background: #262626
+       border-radius: 2px
+       padding:1px 8px 
+     .card_info
+      display: flex
+      align-items: center
+      justify-content:row
+      .card_rating
+       margin-right: 26px
+       font-style: normal
+       font-weight: bold
+       font-size: 18px
+       line-height: 32px
+       color: #FFC107
+      .card_value
+       font-style: normal
+       font-weight: normal
+       font-size: 18px
+       line-height: 32px
+       color: #8C8C8C
+       margin-right: 10px
+       &:after
+        content: " "
+        width: 5px
+        height: 5px
+        background-color: #8C8C8C
+        display: inline-block
+        vertical-align: middle
+        border-radius: 50%
+        margin-left: 10px
+      .category
+       font-style: normal
+       font-weight: normal
+       font-size: 18px
+       line-height: 32px
+       color: #8C8C8C
+.footer
+ padding: 60px 0
+ .container
+  .footer-block 
+   display: flex
+   align-items: center
+   justify-content: space-between
+   .nav_footer
+    margin-left: 35px
+    margin-right: auto
+    .nav_item
+     font-size: 18px
+     line-height: 21px
+     color: #595959
+     text-decoration: none
+    .nav_item:not(:last-child)
+     margin-right: 15px
+   .social_media
+    display: flex
+    align-items: center
+    .social_link:not(:last-child)
+     margin-right: 21px
+@media(max-width: 1366px)
+ .container
+  width: 960px
+ .main
+  .promo 
+   background-size: 450px
+   background-position: top 3px right -65px
+  .restaurants
+   .cards
+    .card
+     flex-basis: 31% 
+.card
+ flex-basis: 39%  
+@media(max-width: 992px)
+ .container
+  max-width: 750px
+ .main
+  .promo 
+   padding: 50px
+   background-size: 400px
+   .promo-text
+    font-size: 16px
+    max-width: 400px
+   .title
+    // font-size: 17px 
+  .restaurants
+   .section-heading
+    .input-search
+     flex: 0.5
+   .cards
+    .card
+     flex-basis: 49%  
+ .footer
+  .container
+   .footer-block
+    .nav_footer
+     .nav_item
+      font-size: 16px
+@media (max-width: 768px)
+  .container
+   max-width: 560px
+  .main
+   .container
+    max-width: 560px
+    .promo 
+     background-position: top -13px right -101px
+     background-size: 295px
+    .restaurants
+     .section-heading
+      .input-search
+       flex: 0.7
+     .cards
+      .card
+       .card_text
+        .card_descriprtion
+         .card_title
+          font-size: 18px
+        .card_info
+         flex-wrap: wrap
+         .card_rating
+          font-size: 14px
+         .card_value
+          font-size: 14px
+         .category
+          font-size: 14px
+
+        .card_rating
+         flex-basis: 100%
+  .title
+   font-size: 24px
+   line-height: 1.4
+
+  .footer
+   .container
+    max-width: 560px
+    .footer-block
+     .nav_footer
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      .nav_item
+       font-size: 16px
+       flex-basis: 40% 
+      .nav_item:not(:last-child)
+       margin-right: 3px
+     .container
+      max-width: 560px
+@media (max-width: 578px)
+ .container
+  width: 90%
+  .header
+    flex-wrap: wrap
+    .input-addres
+     margin-top: 15px
+     order: 5
+     flex: 1
+ .main
+  .container
+   .promo
+    background-image: none
+    .title
+     margin-bottom: 10px
+     line-height: 1.3
+    .promo-text
+     margin-top: 10px
+   .restaurants
+    .section-heading
+     .section-title
+      font-size: 20px
+     .input-search
+      flex: 0.6
+    .cards
+     .card
+      flex-basis: 100%
+      .card_img
+       width: 100%
+ .footer
+  padding: 30px 0
+  .container
+   .footer-block
+    align-items: flex-start
+    .footer_logo
+     margin-right: 15px
+     order: 1
+    .nav_footer
+     margin-left: 0px
+     margin-right: 0px
+     order: 0
+     .nav_item
+      flex-basis: 48%
+    .social_media
+     order: 2
+@media (max-width:480px)
+ .container
+  .header
+    .input-addres
+    .buttons
+     .button
+      min-height: 40px
+      .button_icon
+       margin: 0px
+      .button_text
+       display: none
+ .main
+  .container
+   .promo
+    padding: 20px
+    .title
+    .promo-text
+   .restaurants
+    .section-heading
+     flex-wrap: wrap
+     .input-search
+      flex: 1
+ .footer
+  .container
+   .footer-block
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
+    .footer_logo
+     order: 0
+     margin-bottom: 20px
+    .nav_footer
+     margin-bottom: 20px
+     text-align: center
+     .nav_item
+      flex-basis: 100%
+    .social_media
+
+
+
+    
+
+
+
+
+
+
+
+
